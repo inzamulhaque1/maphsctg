@@ -70,7 +70,7 @@ const AboutSchool = () => {
                       <Book className="text-2xl text-white" />
                     </div>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-[#002147]">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[#002147] font-roboto">
                     About School
                   </h2>
                 </div>
@@ -88,8 +88,8 @@ const AboutSchool = () => {
                 </div>
 
                 {/* About Text */}
-                <div className="space-y-4">
-                  <p className="text-[#002147] leading-relaxed text-sm sm:text-base">
+                <div className="space-y-4 font-bangla3">
+                  <p className="text-[#002147] leading-relaxed text-sm sm:text-base ">
                     ১৯০২ খৃষ্টাব্দের শেষভাগে পাহাড়তলী মডেল স্কুলের প্রধান প-িত
                     মহিমচন্দ্র গুহ মহোদয় ২৫ বৎসর চাকুরীর পর কার্য্য হইতে অবসর
                     গ্রহণ সময়ে তাঁহার ছাত্রবৃন্দ তাঁহাকে বিদায় অভিনন্দন
@@ -103,20 +103,28 @@ const AboutSchool = () => {
                     বিষয়ে গ্রামবাসীদিগকে উৎসাহিত করেন। এ বিষয়ে স্থির
                     সিদ্ধান্তে উপনীত হওয়ার জন্য ১৯০২ খৃষ্টাব্দের ৩০শে ডিসেম্বর
                     তারিখে পাহাড়তলী গ্রামবাসী বৌদ্ধগণ স্থানীয় মডেল স্কুল গৃহে
-                    এক সভায় সমবেত হন।  হাই স্কুল স্থাপনের আবশ্যকতা ও উপযোগিতা সম্বন্ধে সবিশেষ আলোচনা হওয়ার পর সভায় ইহা স্থিরীকৃত হয় যে, পাহাড়তলী গ্রামে একটা উচ্চ ইংরেজী বিদ্যালয় স্থাপন করা হউক এবং এই উপলক্ষে চাঁদা আদায় করা হউক এবং চাঁদা আদায়ের জন্য একখানি আবেদন পত্র সভার পক্ষে বাবু হরগোবিন্দ মুচ্ছদ্দী, বাবু জয়লাল বড়–য়া ও বাবু সতীশচন্দ্র বড়ুয়া মহাশয়গণের নামে ছাপান হউক। .......
+                    এক সভায় সমবেত হন। হাই স্কুল স্থাপনের আবশ্যকতা ও উপযোগিতা
+                    সম্বন্ধে সবিশেষ আলোচনা হওয়ার পর সভায় ইহা স্থিরীকৃত হয় যে,
+                    পাহাড়তলী গ্রামে একটা উচ্চ ইংরেজী বিদ্যালয় স্থাপন করা হউক এবং
+                    এই উপলক্ষে চাঁদা আদায় করা হউক এবং চাঁদা আদায়ের জন্য একখানি
+                    আবেদন পত্র সভার পক্ষে বাবু হরগোবিন্দ মুচ্ছদ্দী, বাবু জয়লাল
+                    বড়–য়া ও বাবু সতীশচন্দ্র বড়ুয়া মহাশয়গণের নামে ছাপান হউক।
+                    .......
                   </p>
                 </div>
 
                 {/* Read More Button */}
                 <div className="mt-6">
-                  <button className="group relative overflow-hidden bg-gradient-to-br from-[#002147] via-[#002147] to-[#002147] hover:from-[#002147] hover:via-purple-500 hover:to-[#002147] text-white px-6 py-3 rounded-2xl font-semibold transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-[#002147]/25">
-                    <span className="relative z-10 flex items-center gap-2">
-                      Read More
-                      <ChevronRight className="text-lg transition-transform duration-300 group-hover:translate-x-1" />
-                    </span>
-                    {/* Shimmer effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 group-hover:translate-x-full transition-transform duration-1000"></div>
-                  </button>
+                  <Link to={"/about-us"}>
+                    <button className="group relative overflow-hidden bg-gradient-to-br from-[#002147] via-[#002147] to-[#002147] hover:from-[#002147] hover:via-purple-500 hover:to-[#002147] text-white px-6 py-3 rounded-2xl font-semibold transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-[#002147]/25">
+                      <span className="relative z-10 flex items-center gap-2">
+                        Read More
+                        <ChevronRight className="text-lg transition-transform duration-300 group-hover:translate-x-1" />
+                      </span>
+                      {/* Shimmer effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -132,7 +140,7 @@ const AboutSchool = () => {
                     <div className="bg-white/20 p-2 rounded-xl backdrop-blur-sm">
                       <Bell className="text-white text-xl animate-pulse" />
                     </div>
-                    <h3 className="text-white font-bold text-lg">
+                    <h3 className="text-white font-bold text-lg font-poppins">
                       Notice Board
                     </h3>
                   </div>
@@ -145,7 +153,7 @@ const AboutSchool = () => {
                       key={notice.id}
                       className={`
                                                 border-b border-[#002147]/10 last:border-b-0 transition-all duration-300
-                                                hover:bg-[#002147]/5 cursor-pointer group
+                                                hover:bg-[#002147]/5 cursor-pointer group  font-bangla4
                                                 ${
                                                   activeNotice === notice.id
                                                     ? "bg-[#002147]/5"

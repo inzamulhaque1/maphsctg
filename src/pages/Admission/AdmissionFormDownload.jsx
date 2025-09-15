@@ -41,7 +41,7 @@ const AdmissionFormDownload = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-gray-100 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-gray-100 py-8 px-4  font-bangla4">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">

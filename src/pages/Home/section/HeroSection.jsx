@@ -29,6 +29,7 @@ const HeroSection = () => {
   const noticeIntervalRef = useRef(null)
   const containerRef = useRef(null)
   const dragStartRef = useRef(0)
+  const noticeContainerRef = useRef(null)
 
   const images = [
     "https://maphsctg.edu.bd/images/slider/1563685477.jpg",
@@ -40,27 +41,27 @@ const HeroSection = () => {
 
   const notices = [
     {
-      icon: <Calendar className="w-5 h-5" />,
+      icon: <Calendar className="w-4 h-4 md:w-5 md:h-5" />,
       text: "আগামী ১৩ সেপ্টেম্বর আখেরী চাহার সোম্বা উপলক্ষে বিদ্যালয় বন্ধ থাকবে",
       fullText: "আগামী ১৩ সেপ্টেম্বর, বুধবার ২০২৩, আখেরী চাহার সোম্বা উপলক্ষে বিদ্যালয় বন্ধ থাকিবে। সকল শিক্ষার্থীদের জানানো যাচ্ছে।",
     },
     {
-      icon: <Star className="w-5 h-5" />,
+      icon: <Star className="w-4 h-4 md:w-5 md:h-5" />,
       text: "আগামী ০৬ সেপ্টেম্বর শুভ জন্মাষ্টমী উপলক্ষে বিদ্যালয় বন্ধ থাকবে",
       fullText: "আগামী ০৬ সেপ্টেম্বর, বুধবার শুভ জন্মাষ্টমী উপলক্ষে বিদ্যালয় বন্ধ থাকিবে। সকল শিক্ষার্থীদের জানানো যাচ্ছে।",
     },
     {
-      icon: <BookOpen className="w-5 h-5" />,
+      icon: <BookOpen className="w-4 h-4 md:w-5 md:h-5" />,
       text: "বার্ষিক পরীক্ষার সময়সূচী প্রকাশিত হয়েছে সকল শাখার জন্য",
       fullText: "বার্ষিক পরীক্ষার সময়সূচী প্রকাশিত হয়েছে। ২০২৩ সালের বার্ষিক পরীক্ষার সময়সূচী সকল শিক্ষার্থী ও অভিভাবকদের জানানো যাচ্ছে।",
     },
     {
-      icon: <Trophy className="w-5 h-5" />,
+      icon: <Trophy className="w-4 h-4 md:w-5 md:h-5" />,
       text: "আন্তঃবিদ্যালয় ক্রীড়া প্রতিযোগিতায় আমাদের গৌরবজনক বিজয়",
       fullText: "আন্তঃবিদ্যালয় ক্রীড়া প্রতিযোগিতায় গৌরবজনক সাফল্য অর্জন। আমাদের বিদ্যালয়ের শিক্ষার্থীরা জেলা পর্যায়ে অসাধারণ সাফল্য পেয়েছে।",
     },
     {
-      icon: <GraduationCap className="w-5 h-5" />,
+      icon: <GraduationCap className="w-4 h-4 md:w-5 md:h-5" />,
       text: "নতুন শিক্ষাবর্ষে ভর্তির আবেদন গ্রহণ শুরু হয়েছে আজ থেকে",
       fullText: "২০২৪ শিক্ষাবর্ষে ভর্তির বিজ্ঞপ্তি প্রকাশিত। আগামী শিক্ষাবর্ষ ২০২৪ এর জন্য ভর্তির আবেদন গ্রহণ শুরু হয়েছে।",
     },
@@ -200,62 +201,62 @@ const HeroSection = () => {
   }, [isDragging, dragOffset, nextSlide, prevSlide])
 
   return (
-    <div className="relative  bg-[#002147] overflow-hidden py-16">
+    <div className="relative bg-[#002147] overflow-hidden py-8 md:py-12 lg:py-16">
       <div className="absolute inset-0 bg-slate-900"></div>
 
       {/* Main hero content */}
-      <div className="relative z-10  flex items-center">
+      <div className="relative z-10 flex items-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
+            className={`flex flex-col lg:grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center ${
               currentSlide % 2 === 0 ? "" : "lg:grid-flow-col-dense"
             }`}
           >
             {/* Content section */}
-            <div className={`space-y-6 lg:space-y-8 ${currentSlide % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}>
-              <div className="bg-slate-800/90 backdrop-blur-xl border border-slate-600/50 rounded-3xl p-3 shadow-2xl">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="flex items-center gap-3 text-yellow-400">
-                    <div className="p-2 bg-yellow-400/20 rounded-xl">
-                      <Bell className="w-5 h-5 animate-pulse" />
+            <div className={`space-y-4 md:space-y-6 lg:space-y-8 order-2 lg:${currentSlide % 2 === 0 ? "order-1" : "order-2"}`}>
+              <div className="bg-slate-800/90 backdrop-blur-xl border border-slate-600/50 rounded-2xl md:rounded-3xl p-3 md:p-4 shadow-2xl">
+                <div className="flex items-center gap-2 md:gap-3 mb-2">
+                  <div className="flex items-center gap-2 md:gap-3 text-yellow-400">
+                    <div className="p-1 md:p-2 bg-yellow-400/20 rounded-lg md:rounded-xl">
+                      <Bell className="w-4 h-4 md:w-5 md:h-5 animate-pulse" />
                     </div>
-                    <span className="font-bold text-lg text-yellow-300">সর্বশেষ নোটিশ</span>
+                    <span className="font-bold text-base md:text-lg text-yellow-300 font-bangla1">সর্বশেষ নোটিশ</span>
                   </div>
                   <div className="flex-1 h-px bg-gradient-to-r from-yellow-400/50 to-transparent"></div>
                 </div>
 
-                <div className="relative overflow-hidden rounded-2xl bg-slate-700/50 p-4 border border-slate-600/30">
+                <div className="relative overflow-hidden rounded-xl md:rounded-2xl bg-slate-700/50 p-3 md:p-4 border border-slate-600/30 min-h-[120px]">
                   <div
-                    className="flex transition-transform duration-500 ease-out"
-                    style={{ transform: `translateX(-${currentNotice * 100}%)` }}
+                    ref={noticeContainerRef}
+                    className="h-full transition-all duration-500 ease-in-out"
                   >
-                    {notices.map((notice, index) => (
-                      <div key={index} className="w-full flex-shrink-0">
-                        <div className="flex items-start gap-4 group cursor-pointer">
-                          <div className="text-yellow-400 mt-1 p-2 bg-yellow-400/15 rounded-xl group-hover:bg-yellow-400/25 transition-colors">
-                            {notice.icon}
-                          </div>
-                          <div className="flex-1 space-y-2">
-                            <p className="text-white font-medium text-base leading-relaxed">{notice.text}</p>
-                            <p className="text-slate-200 text-sm leading-relaxed">{notice.fullText}</p>
-                          </div>
-                          <ArrowRight className="w-5 h-5 text-slate-300 group-hover:text-yellow-400 group-hover:translate-x-1 transition-all mt-1" />
-                        </div>
+                    <div className="flex items-start gap-3 md:gap-4 group cursor-pointer h-full font-bangla3">
+                      <div className="text-yellow-400 mt-0.5 md:mt-1 p-1.5 md:p-2 bg-yellow-400/15 rounded-lg md:rounded-xl group-hover:bg-yellow-400/25 transition-colors flex-shrink-0">
+                        {notices[currentNotice].icon}
                       </div>
-                    ))}
+                      <div className="flex-1 space-y-1 md:space-y-2">
+                        <p className="text-white font-medium text-sm md:text-base leading-relaxed">
+                          {notices[currentNotice].text}
+                        </p>
+                        <p className="text-slate-200 text-xs md:text-sm leading-relaxed hidden md:block">
+                          {notices[currentNotice].fullText}
+                        </p>
+                      </div>
+                      <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-slate-300 group-hover:text-yellow-400 group-hover:translate-x-1 transition-all mt-0.5 md:mt-1 flex-shrink-0" />
+                    </div>
                   </div>
                 </div>
 
                 {/* Enhanced notice indicators */}
-                <div className="flex justify-center gap-3 mt-6">
+                <div className="flex justify-center gap-2 md:gap-3 mt-4 md:mt-6">
                   {notices.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentNotice(index)}
-                      className={`h-2 rounded-full transition-all duration-300 ${
+                      className={`h-1.5 md:h-2 rounded-full transition-all duration-300 ${
                         index === currentNotice
-                          ? "bg-yellow-400 w-8 shadow-lg shadow-yellow-400/50"
-                          : "bg-slate-400 hover:bg-slate-300 w-2"
+                          ? "bg-yellow-400 w-6 md:w-8 shadow-lg shadow-yellow-400/50"
+                          : "bg-slate-400 hover:bg-slate-300 w-1.5 md:w-2"
                       }`}
                     />
                   ))}
@@ -263,25 +264,27 @@ const HeroSection = () => {
               </div>
 
               {/* Main hero text */}
-              <div className="space-y-6">
-                <div className="space-y-3">
-                  <p className="text-yellow-300 font-semibold text-lg tracking-wide">
+              <div className="space-y-4 md:space-y-6">
+                <div className="space-y-2 md:space-y-3">
+                  <p className="text-yellow-300 font-semibold text-base md:text-lg tracking-wide font-bangla4">
                     {heroContent[currentSlide].subtitle}
                   </p>
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight font-bangla1">
                     {heroContent[currentSlide].title}
                   </h1>
                 </div>
 
-                {/* <p className="text-xl text-slate-100 leading-relaxed">{heroContent[currentSlide].description}</p> */}
+                <p className="text-base md:text-lg lg:text-xl text-slate-100 leading-relaxed font-bangla3">
+                  {heroContent[currentSlide].description}
+                </p>
               </div>
             </div>
 
             {/* Image section */}
-            <div className={`relative ${currentSlide % 2 === 0 ? "lg:order-2" : "lg:order-1"}`}>
+            <div className={`relative order-1 lg:${currentSlide % 2 === 0 ? "order-2" : "order-1"} w-full`}>
               <div
                 ref={containerRef}
-                className="relative aspect-[4/3] lg:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl shadow-black/50 cursor-grab select-none h-[500px] w-full"
+                className="relative aspect-video md:aspect-[4/3] lg:aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl shadow-black/50 cursor-grab select-none w-full h-auto max-h-[400px] md:max-h-[500px]"
                 onMouseDown={handlePointerDown}
                 onMouseMove={handlePointerMove}
                 onMouseUp={handlePointerUp}
@@ -324,14 +327,14 @@ const HeroSection = () => {
                             <img
                               src={src || "/placeholder.svg"}
                               alt={`School image ${index + 1}`}
-                              className="w-full h-full"
+                              className="w-full h-full object-cover"
                               draggable={false}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#002147]/40 via-transparent to-transparent" />
                           </>
                         ) : (
                           <div className="w-full h-full bg-gradient-to-br from-slate-700 to-slate-800 animate-pulse flex items-center justify-center">
-                            <div className="w-12 h-12 border-4 border-blue-400/30 border-t-blue-400 rounded-full animate-spin" />
+                            <div className="w-8 h-8 md:w-12 md:h-12 border-4 border-blue-400/30 border-t-blue-400 rounded-full animate-spin" />
                           </div>
                         )}
                       </div>
@@ -342,36 +345,36 @@ const HeroSection = () => {
                 {/* Navigation controls */}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-black/30 backdrop-blur-xl text-white rounded-2xl hover:bg-black/50 transition-all duration-300 hover:scale-110"
+                  className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 bg-black/30 backdrop-blur-xl text-white rounded-xl md:rounded-2xl hover:bg-black/50 transition-all duration-300 hover:scale-110"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-4 h-4 md:w-6 md:h-6" />
                 </button>
 
                 <button
                   onClick={nextSlide}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-black/30 backdrop-blur-xl text-white rounded-2xl hover:bg-black/50 transition-all duration-300 hover:scale-110"
+                  className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 bg-black/30 backdrop-blur-xl text-white rounded-xl md:rounded-2xl hover:bg-black/50 transition-all duration-300 hover:scale-110"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-4 h-4 md:w-6 md:h-6" />
                 </button>
 
                 {/* Play/pause button */}
                 <button
                   onClick={() => setIsPlaying(!isPlaying)}
-                  className="absolute top-4 right-4 z-20 p-3 bg-black/30 backdrop-blur-xl text-white rounded-2xl hover:bg-black/50 transition-all duration-300 hover:scale-110"
+                  className="absolute top-2 md:top-4 right-2 md:right-4 z-20 p-2 md:p-3 bg-black/30 backdrop-blur-xl text-white rounded-xl md:rounded-2xl hover:bg-black/50 transition-all duration-300 hover:scale-110"
                 >
-                  {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                  {isPlaying ? <Pause className="w-3 h-3 md:w-5 md:h-5" /> : <Play className="w-3 h-3 md:w-5 md:h-5" />}
                 </button>
 
                 {/* Slide indicators */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+                <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2 md:gap-3">
                   {images.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`h-2 rounded-full transition-all duration-300 ${
+                      className={`h-1.5 md:h-2 rounded-full transition-all duration-300 ${
                         index === currentSlide
-                          ? "bg-white w-8 shadow-lg shadow-white/50"
-                          : "bg-white/40 hover:bg-white/60 w-2"
+                          ? "bg-white w-4 md:w-6 lg:w-8 shadow-lg shadow-white/50"
+                          : "bg-white/40 hover:bg-white/60 w-1.5 md:w-2"
                       }`}
                     />
                   ))}
@@ -379,15 +382,15 @@ const HeroSection = () => {
               </div>
 
               {/* Simplified decorative elements */}
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-amber-400/20 to-orange-500/20 rounded-full blur-2xl" />
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-full blur-2xl" />
+              <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-amber-400/20 to-orange-500/20 rounded-full blur-xl" />
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 w-20 h-20 md:w-32 md:h-32 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-full blur-xl" />
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#002147] to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-[#002147] to-transparent pointer-events-none" />
     </div>
   )
 }

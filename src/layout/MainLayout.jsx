@@ -5,17 +5,19 @@ import NoticeBar from '../components/NoticeBar';
 import MenuBar from '../components/MenuBar';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
+import Navbar from '../components/Navbar';
 
 
 const MainLayout = () => {
 
     
     return (
-        <div>
+        <div className='font-bangla4'>
             <ScrollToTop />
-            <Topbar></Topbar>
+            {/* <Topbar></Topbar>
             <NoticeBar></NoticeBar>
-            <MenuBar></MenuBar>
+            <MenuBar></MenuBar> */}
+            <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>

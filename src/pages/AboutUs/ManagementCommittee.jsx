@@ -128,7 +128,7 @@ const ManagementCommittee = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-4 md:py-8 px-3 md:px-4">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-4 md:py-8 px-3 md:px-4 font-bangla4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 md:mb-8">

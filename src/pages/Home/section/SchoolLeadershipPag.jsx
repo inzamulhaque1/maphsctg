@@ -51,7 +51,7 @@ const SchoolLeadershipPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100  font-bangla4">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-200/30 to-indigo-300/20 rounded-full blur-3xl animate-pulse"></div>
@@ -174,7 +174,7 @@ const SchoolLeadershipPage = () => {
                 : "translate-y-10 opacity-0"
             }`}
           >
-            <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+            <div className="relative  bg-white rounded-2xl sm:rounded-3xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
               {/* Decorative Border */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#002147] to-[#003366] p-0.5 rounded-2xl sm:rounded-3xl">
                 <div className="bg-white h-full w-full rounded-2xl sm:rounded-3xl"></div>
@@ -183,7 +183,7 @@ const SchoolLeadershipPage = () => {
               {/* Content */}
               <div className="relative">
                 {/* Header */}
-                <div className="bg-gradient-to-br from-[#002147] via-[#003366] to-[#004080] p-4 sm:p-6 lg:p-8 relative overflow-hidden">
+                <div className="bg-gradient-to-br  from-[#002147] via-[#003366] to-[#004080] p-4 sm:p-6 lg:p-8 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent"></div>
                   <div className="relative flex items-center gap-3 sm:gap-4">
                     <div className="bg-white/10 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg border border-white/20 group-hover:scale-110 transition-transform duration-300">

@@ -236,7 +236,7 @@ export default function AboutUs() {
   ]
 
   return (
-    <div className="min-h-screen bg-white relative">
+    <div className="min-h-screen bg-white relative  font-bangla4">
       <div className="relative bg-[#002147] text-white py-16 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
